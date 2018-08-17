@@ -17,11 +17,11 @@ that could not be queried.
 .PARAMETER ErrorLog
 When used with -LogErrors, specifies the file path and name
 to which failed computer names will be written. Defaults to
-C:\temp\Get-SystemInfo_ErrorLog.txt.
+C:\temp\C:\temp\pa-errors.log.
 .EXAMPLE
  Get-Content names.txt | Get-SystemInfo
 .EXAMPLE
- Get-SystemInfo -ComputerName SERVER1,SERVER2
+ Get-PASystemInfo -ComputerName SERVER1,SERVER2 -LogErrors
 #>
     [CmdletBinding()]
     param(
@@ -74,7 +74,7 @@ C:\temp\Get-SystemInfo_ErrorLog.txt.
     }
     END {}
 
-} # Get-SystemInfo function
+} # Get-PASystemInfo function
 
 Export-ModuleMember -Variable PAErrorLogPreference
 Export-ModuleMember -Function Get-PASystemInfo
