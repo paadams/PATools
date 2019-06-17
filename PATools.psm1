@@ -1,6 +1,6 @@
 $PAErrorLogPreference = 'C:\temp\pa-errors.log'
 
-function Get-PASystemInfo {
+function Get-SystemInfo {
     <#
 .SYNOPSIS
 Retrieves key system version and model information
@@ -74,7 +74,7 @@ C:\temp\C:\temp\pa-errors.log.
     }
     END {}
 
-} # Get-PASystemInfo function
+} # Get-SystemInfo function
 
 Export-ModuleMember -Variable PAErrorLogPreference
-Export-ModuleMember -Function Get-PASystemInfo
+Export-ModuleMember -Function Get-SystemInfo
